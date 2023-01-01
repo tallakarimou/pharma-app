@@ -55,18 +55,19 @@
             <p> Dashboard </p>
           </a>
         </li>
+
         <li class="nav-item ">
-          <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+          <a class="nav-link" data-toggle="collapse" href="#invoices">
             <i class="material-icons">image</i>
             <p> Invoices
               <b class="caret"></b>
             </p>
           </a>
-          <div class="collapse" id="pagesExamples">
+          <div class="collapse" id="invoices">
             <ul class="nav">
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/pages/pricing.html">
-                  <span class="sidebar-mini"> A </span>
+                  <span class="sidebar-mini"> AI </span>
                   <span class="sidebar-normal"> Add Invoices </span>
                 </a>
               </li>
@@ -76,121 +77,41 @@
                   <span class="sidebar-normal"> Manage Invoices </span>
                 </a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/timeline.html">
-                  <span class="sidebar-mini"> T </span>
-                  <span class="sidebar-normal"> Timeline </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/login.html">
-                  <span class="sidebar-mini"> LP </span>
-                  <span class="sidebar-normal"> Login Page </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/register.html">
-                  <span class="sidebar-mini"> RP </span>
-                  <span class="sidebar-normal"> Register Page </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/lock.html">
-                  <span class="sidebar-mini"> LSP </span>
-                  <span class="sidebar-normal"> Lock Screen Page </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/user.html">
-                  <span class="sidebar-mini"> UP </span>
-                  <span class="sidebar-normal"> User Profile </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/error.html">
-                  <span class="sidebar-mini"> E </span>
-                  <span class="sidebar-normal"> Error Page </span>
-                </a>
-              </li>
             </ul>
           </div>
         </li>
+
         <li class="nav-item ">
-          <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
-            <i class="material-icons">apps</i>
-            <p> Components
-              <b class="caret"></b>
-            </p>
-          </a>
-          <div class="collapse" id="componentsExamples">
-            <ul class="nav">
-              <li class="nav-item ">
-                <a class="nav-link" data-toggle="collapse" href="#componentsCollapse">
-                  <span class="sidebar-mini"> MLT </span>
-                  <span class="sidebar-normal"> Multi Level Collapse
-                    <b class="caret"></b>
-                  </span>
-                </a>
-                <div class="collapse" id="componentsCollapse">
-                  <ul class="nav">
-                    <li class="nav-item ">
-                      <a class="nav-link" href="#0">
-                        <span class="sidebar-mini"> E </span>
-                        <span class="sidebar-normal"> Example </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/buttons.html">
-                  <span class="sidebar-mini"> B </span>
-                  <span class="sidebar-normal"> Buttons </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/grid.html">
-                  <span class="sidebar-mini"> GS </span>
-                  <span class="sidebar-normal"> Grid System </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/panels.html">
-                  <span class="sidebar-mini"> P </span>
-                  <span class="sidebar-normal"> Panels </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/sweet-alert.html">
-                  <span class="sidebar-mini"> SA </span>
-                  <span class="sidebar-normal"> Sweet Alert </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/notifications.html">
-                  <span class="sidebar-mini"> N </span>
-                  <span class="sidebar-normal"> Notifications </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/icons.html">
-                  <span class="sidebar-mini"> I </span>
-                  <span class="sidebar-normal"> Icons </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/components/typography.html">
-                  <span class="sidebar-mini"> T </span>
-                  <span class="sidebar-normal"> Typography </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <a class="nav-link" data-toggle="collapse" href="#pagesusers">
+              <i class="material-icons">person</i>
+              <p> Users
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="pagesusers">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">
+                    <span class="sidebar-mini"> AU </span>
+                    <span class="sidebar-normal"> Add User </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">
+                    <span class="sidebar-mini"> MU </span>
+                    <span class="sidebar-normal"> Manage Users </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
         </li>
-        <li class="nav-item ">
+
+
+
+          <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#formsExamples">
             <i class="material-icons">content_paste</i>
-            <p> Forms
+            <p> Products
               <b class="caret"></b>
             </p>
           </a>
@@ -198,103 +119,126 @@
             <ul class="nav">
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/forms/regular.html">
-                  <span class="sidebar-mini"> RF </span>
-                  <span class="sidebar-normal"> Regular Forms </span>
+                  <span class="sidebar-mini"> AP </span>
+                  <span class="sidebar-normal"> Add Produt </span>
                 </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/forms/extended.html">
-                  <span class="sidebar-mini"> EF </span>
-                  <span class="sidebar-normal"> Extended Forms </span>
+                  <span class="sidebar-mini"> MP </span>
+                  <span class="sidebar-normal"> Manage Product </span>
                 </a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/forms/validation.html">
-                  <span class="sidebar-mini"> VF </span>
-                  <span class="sidebar-normal"> Validation Forms </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/forms/wizard.html">
-                  <span class="sidebar-mini"> W </span>
-                  <span class="sidebar-normal"> Wizard </span>
-                </a>
-              </li>
-            </ul>
+
           </div>
         </li>
+
         <li class="nav-item ">
-          <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
-            <i class="material-icons">grid_on</i>
-            <p> Tables
+          <a class="nav-link" data-toggle="collapse" href="#tablessuppliers">
+            <i class="material-icons">list</i>
+            <p> Suppliers
               <b class="caret"></b>
             </p>
           </a>
-          <div class="collapse" id="tablesExamples">
+          <div class="collapse" id="tablessuppliers">
             <ul class="nav">
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/tables/regular.html">
-                  <span class="sidebar-mini"> RT </span>
-                  <span class="sidebar-normal"> Regular Tables </span>
+                  <span class="sidebar-mini"> AS </span>
+                  <span class="sidebar-normal"> Add Supplier </span>
                 </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/tables/extended.html">
-                  <span class="sidebar-mini"> ET </span>
-                  <span class="sidebar-normal"> Extended Tables </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/tables/datatables.net.html">
-                  <span class="sidebar-mini"> DT </span>
-                  <span class="sidebar-normal"> DataTables.net </span>
+                  <span class="sidebar-mini"> MS </span>
+                  <span class="sidebar-normal"> Manage Suppliers </span>
                 </a>
               </li>
             </ul>
           </div>
         </li>
+
         <li class="nav-item ">
-          <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
-            <i class="material-icons">place</i>
-            <p> Maps
+          <a class="nav-link" data-toggle="collapse" href="#tableroles">
+            <i class="material-icons">border_color</i>
+            <p> Roles
               <b class="caret"></b>
             </p>
           </a>
-          <div class="collapse" id="mapsExamples">
+          <div class="collapse" id="tableroles">
             <ul class="nav">
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/maps/google.html">
-                  <span class="sidebar-mini"> GM </span>
-                  <span class="sidebar-normal"> Google Maps </span>
+                  <span class="sidebar-mini"> AR </span>
+                  <span class="sidebar-normal"> Add Role </span>
                 </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="../examples/maps/fullscreen.html">
-                  <span class="sidebar-mini"> FSM </span>
-                  <span class="sidebar-normal"> Full Screen Map </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="../examples/maps/vector.html">
-                  <span class="sidebar-mini"> VM </span>
-                  <span class="sidebar-normal"> Vector Map </span>
+                  <span class="sidebar-mini"> MR </span>
+                  <span class="sidebar-normal"> Manage Roles </span>
                 </a>
               </li>
             </ul>
           </div>
+
+
         </li>
+
         <li class="nav-item ">
-          <a class="nav-link" href="../examples/widgets.html">
-            <i class="material-icons">widgets</i>
-            <p> Widgets </p>
-          </a>
+            <a class="nav-link" data-toggle="collapse" href="#sales">
+              <i class="material-icons">input</i>
+              <p> Sales
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="sales">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="../examples/maps/google.html">
+                    <span class="sidebar-mini"> AS </span>
+                    <span class="sidebar-normal"> Add Sales </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="../examples/maps/fullscreen.html">
+                    <span class="sidebar-mini"> MS </span>
+                    <span class="sidebar-normal"> Manage Sales </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
         </li>
+
+
         <li class="nav-item ">
-          <a class="nav-link" href="../examples/charts.html">
-            <i class="material-icons">timeline</i>
-            <p> Charts </p>
-          </a>
+            <a class="nav-link" data-toggle="collapse" href="#report">
+              <i class="material-icons">search</i>
+              <p> Report
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="report">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="../examples/maps/google.html">
+                    <span class="sidebar-mini"> SR </span>
+                    <span class="sidebar-normal"> Sales Report </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="../examples/maps/fullscreen.html">
+                    <span class="sidebar-mini"> OR </span>
+                    <span class="sidebar-normal"> Orders Report </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
         </li>
+
+
+
+
         <li class="nav-item ">
           <a class="nav-link" href="../examples/calendar.html">
             <i class="material-icons">date_range</i>
