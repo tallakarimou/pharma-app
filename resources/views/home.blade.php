@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('master.app')
 
 @section('content')
 <div class="container">
@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    @include('partials.sidebar')
                 </div>
             </div>
         </div>

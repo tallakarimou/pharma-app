@@ -20,7 +20,7 @@
         <div class="user-info">
           <a data-toggle="collapse" href="#collapseExample" class="username">
             <span>
-              Admin
+                username
               <b class="caret"></b>
             </span>
           </a>
@@ -66,13 +66,13 @@
           <div class="collapse" id="invoices">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/pricing.html">
+                <a class="nav-link" href="#">
                   <span class="sidebar-mini"> AI </span>
                   <span class="sidebar-normal"> Add Invoices </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/pages/rtl.html">
+                <a class="nav-link" href="#">
                   <span class="sidebar-mini"> MI </span>
                   <span class="sidebar-normal"> Manage Invoices </span>
                 </a>
@@ -109,22 +109,22 @@
 
 
           <li class="nav-item ">
-          <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+          <a class="nav-link" data-toggle="collapse" href="#products">
             <i class="material-icons">content_paste</i>
             <p> Products
               <b class="caret"></b>
             </p>
           </a>
-          <div class="collapse" id="formsExamples">
+          <div class="collapse" id="products">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/forms/regular.html">
+                <a class="nav-link" href="{{ route('products.create') }}">
                   <span class="sidebar-mini"> AP </span>
                   <span class="sidebar-normal"> Add Produt </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/forms/extended.html">
+                <a class="nav-link" href="{{ route('products.index') }}">
                   <span class="sidebar-mini"> MP </span>
                   <span class="sidebar-normal"> Manage Product </span>
                 </a>
@@ -143,13 +143,13 @@
           <div class="collapse" id="tablessuppliers">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/tables/regular.html">
+                <a class="nav-link" href="#">
                   <span class="sidebar-mini"> AS </span>
                   <span class="sidebar-normal"> Add Supplier </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/tables/extended.html">
+                <a class="nav-link" href="#">
                   <span class="sidebar-mini"> MS </span>
                   <span class="sidebar-normal"> Manage Suppliers </span>
                 </a>
@@ -168,13 +168,13 @@
           <div class="collapse" id="tableroles">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/maps/google.html">
+                <a class="nav-link" href="{{route('roles.create')}}">
                   <span class="sidebar-mini"> AR </span>
                   <span class="sidebar-normal"> Add Role </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="../examples/maps/fullscreen.html">
+                <a class="nav-link" href="{{route('roles.index')}}">
                   <span class="sidebar-mini"> MR </span>
                   <span class="sidebar-normal"> Manage Roles </span>
                 </a>
@@ -195,13 +195,13 @@
             <div class="collapse" id="sales">
               <ul class="nav">
                 <li class="nav-item ">
-                  <a class="nav-link" href="../examples/maps/google.html">
+                  <a class="nav-link" href="#">
                     <span class="sidebar-mini"> AS </span>
                     <span class="sidebar-normal"> Add Sales </span>
                   </a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="../examples/maps/fullscreen.html">
+                  <a class="nav-link" href="#">
                     <span class="sidebar-mini"> MS </span>
                     <span class="sidebar-normal"> Manage Sales </span>
                   </a>
@@ -221,13 +221,13 @@
             <div class="collapse" id="report">
               <ul class="nav">
                 <li class="nav-item ">
-                  <a class="nav-link" href="../examples/maps/google.html">
+                  <a class="nav-link" href="#">
                     <span class="sidebar-mini"> SR </span>
                     <span class="sidebar-normal"> Sales Report </span>
                   </a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="../examples/maps/fullscreen.html">
+                  <a class="nav-link" href="#">
                     <span class="sidebar-mini"> OR </span>
                     <span class="sidebar-normal"> Orders Report </span>
                   </a>
