@@ -91,13 +91,13 @@
             <div class="collapse" id="pagesusers">
               <ul class="nav">
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="{{ route('users.create') }}">
                     <span class="sidebar-mini"> AU </span>
                     <span class="sidebar-normal"> Add User </span>
                   </a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="{{ route('users.index') }}">
                     <span class="sidebar-mini"> MU </span>
                     <span class="sidebar-normal"> Manage Users </span>
                   </a>

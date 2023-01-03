@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
 
-class UseController extends Controller
+class UserController extends Controller
 {
     public function index(Request $request)
 
