@@ -63,7 +63,6 @@
 
         <div class="form-group">
 
-            <strong>Permission:</strong>
 
             <br/>
 

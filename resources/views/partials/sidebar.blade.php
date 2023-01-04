@@ -20,7 +20,7 @@
         <div class="user-info">
           <a data-toggle="collapse" href="#collapseExample" class="username">
             <span>
-                username
+                {{ auth()->user()->name }}
               <b class="caret"></b>
             </span>
           </a>
@@ -143,13 +143,13 @@
           <div class="collapse" id="tablessuppliers">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('suppliers.create') }}">
                   <span class="sidebar-mini"> AS </span>
                   <span class="sidebar-normal"> Add Supplier </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('suppliers.index') }}">
                   <span class="sidebar-mini"> MS </span>
                   <span class="sidebar-normal"> Manage Suppliers </span>
                 </a>

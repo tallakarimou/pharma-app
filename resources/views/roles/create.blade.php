@@ -51,7 +51,6 @@
 
         <div class="form-group">
 
-            <strong>Name:</strong>
 
             {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
 
@@ -63,7 +62,6 @@
 
         <div class="form-group">
 
-            <strong>Permission:</strong>
 
             <br/>
 

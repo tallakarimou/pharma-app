@@ -2,10 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class SupplierController extends Controller
 {
+
+    function __construct()
+
+    {
+
+         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','show']]);
+
+         $this->middleware('permission:product-create', ['only' => ['create','store']]);
+
+         $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
+
+         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
+
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +28,11 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        //
+        $data = Supplier::orderBy('id','DESC')->paginate(5);
+
+        return view('suppliers.index',compact('data'))
+
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -23,7 +42,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        //
+        return view('suppliers.create');
     }
 
     /**
@@ -34,7 +53,25 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+
+            'name' => 'required',
+
+            'email' => 'required',
+
+            'tel' => ['required','min:9','max:9'],
+
+            'adress' => ['required','min:4']
+
+        ]);
+
+
+
+        Supplier::create($request->all());
+
+        return redirect()->route('suppliers.index')
+
+                        ->with('success','Supplier created successfully.');
     }
 
     /**
@@ -43,9 +80,10 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Supplier $supplier)
     {
-        //
+        return view('suppliers.show',compact('supplier'));
+
     }
 
     /**
@@ -54,9 +92,10 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Supplier $supplier)
     {
-        //
+        return view('suppliers.edit',compact('supplier'));
+
     }
 
     /**
@@ -66,9 +105,31 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Supplier $supplier)
     {
-        //
+
+        request()->validate([
+
+            'name' => 'required',
+
+            'email' => 'required',
+
+            'tel' => ['required','min:9','max:9'],
+
+            'adress' => ['required','min:4']
+
+        ]);
+
+
+
+        $supplier->update($request->all());
+
+
+
+        return redirect()->route('suppliers.index')
+
+                        ->with('success','supplier updated successfully');
+
     }
 
     /**
@@ -77,8 +138,12 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Supplier $supplier)
     {
-        //
+        $supplier->delete();
+
+        return redirect()->route('suppliers.index')
+
+                        ->with('success','supplier deleted successfully');
     }
 }
