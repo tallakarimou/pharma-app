@@ -61,6 +61,9 @@
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
   </script>
   <!-- End Google Tag Manager -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
 </head>
 
 <body class="">
@@ -247,6 +250,8 @@
               <script src="{{asset('assets/js/material-dashboard.min.js?v=2.1.0')}}" type="text/javascript"></script>
               <!-- Material Dashboard DEMO methods, don't include it in your project! -->
               <script src="{{asset('assets/demo/demo.js')}}"></script>
+              @yield('scripts')
+
               <script>
                 $(document).ready(function() {
                   $().ready(function() {

@@ -50,7 +50,7 @@
       </div>
       <ul class="nav">
         <li class="nav-item active ">
-          <a class="nav-link" href="../examples/dashboard.html">
+          <a class="nav-link" href="{{ route('home') }}">
             <i class="material-icons">dashboard</i>
             <p> Dashboard </p>
           </a>
@@ -59,22 +59,22 @@
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#invoices">
             <i class="material-icons">image</i>
-            <p> Invoices
+            <p> Purchases
               <b class="caret"></b>
             </p>
           </a>
           <div class="collapse" id="invoices">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('suppliers.create') }}">
                   <span class="sidebar-mini"> AI </span>
-                  <span class="sidebar-normal"> Add Invoices </span>
+                  <span class="sidebar-normal"> Add Purhase </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('suppliers.index') }}">
                   <span class="sidebar-mini"> MI </span>
-                  <span class="sidebar-normal"> Manage Invoices </span>
+                  <span class="sidebar-normal"> Manage Purchases </span>
                 </a>
               </li>
             </ul>
@@ -136,22 +136,22 @@
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#tablessuppliers">
             <i class="material-icons">list</i>
-            <p> Suppliers
+            <p> Stock
               <b class="caret"></b>
             </p>
           </a>
           <div class="collapse" id="tablessuppliers">
             <ul class="nav">
               <li class="nav-item ">
-                <a class="nav-link" href="{{ route('suppliers.create') }}">
+                <a class="nav-link" href="{{ route('stock.create') }}">
                   <span class="sidebar-mini"> AS </span>
-                  <span class="sidebar-normal"> Add Supplier </span>
+                  <span class="sidebar-normal"> Add Stock </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="{{ route('suppliers.index') }}">
+                <a class="nav-link" href="{{ route('stock.index') }}">
                   <span class="sidebar-mini"> MS </span>
-                  <span class="sidebar-normal"> Manage Suppliers </span>
+                  <span class="sidebar-normal"> Manage Stock </span>
                 </a>
               </li>
             </ul>
@@ -195,7 +195,7 @@
             <div class="collapse" id="sales">
               <ul class="nav">
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="{{ route('clients.create') }}">
                     <span class="sidebar-mini"> AS </span>
                     <span class="sidebar-normal"> Add Sales </span>
                   </a>
@@ -240,7 +240,7 @@
 
 
         <li class="nav-item ">
-          <a class="nav-link" href="../examples/calendar.html">
+          <a class="nav-link" href="{{ route('calendar.create') }}">
             <i class="material-icons">date_range</i>
             <p> Calendar </p>
           </a>

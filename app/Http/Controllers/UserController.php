@@ -11,6 +11,19 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
+    function __construct()
+    {
+
+        $this->middleware('permission:User-list|User-create|User-edit|User-delete', ['only' => ['index','store']]);
+
+        $this->middleware('permission:User-create', ['only' => ['create','store']]);
+
+        $this->middleware('permission:User-edit', ['only' => ['edit','update']]);
+
+        $this->middleware('permission:User-delete', ['only' => ['destroy']]);
+
+   }
     public function index(Request $request)
 
     {

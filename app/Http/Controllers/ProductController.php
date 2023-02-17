@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stock;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -121,7 +123,14 @@ class ProductController extends Controller
 
     {
 
-        return view('products.show',compact('product'));
+        $id = $product->id;
+
+
+        $stock = stock::all()->find($id);
+
+
+       // dd($stock);
+        return view('products.show',compact('product','stock'));
 
     }
 

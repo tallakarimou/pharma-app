@@ -60,6 +60,29 @@
             </div>
 
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>quantity:</strong>
+
+                {{ $stock->quantity ?? ''}}
+
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>expire_at:</strong>
+
+                {{ $stock->expire_at ?? '' }}
+
+            </div>
+
+        </div>
+        
 
     </div>
 

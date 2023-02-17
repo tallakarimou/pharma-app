@@ -54,7 +54,7 @@
                         <td>&euro; {{ $product->price }} </td>
                         <td>{{ $product->detail }}</td>
                         <td class="text-right">
-                            <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+                            <form action="{{ route('products.destroy',$product->id) }}" method="POST" >
                                 <a type='button' class="btn btn-info btn-link" rel="tooltip"
                                     href="{{ route('products.show',$product->id) }}">
                                     <i class="material-icons">person</i>
@@ -68,8 +68,8 @@
                                 @csrf
                                 @method('DELETE')
                                 @can('product-delete')
-                                <button type="submit" class="btn btn-danger btn-link" rel="tooltip">
-                                    <i class="material-icons">close</i>
+                                <button type="submit" class="btn btn-rose btn-link">
+                                        <i class="material-icons">close</i>
                                 </button>
                                 @endcan
                             </form>
@@ -84,9 +84,10 @@
 </table>
 
 </div>
+{!! $products->links() !!}
+
 </div>
 </div>
 
-{!! $products->links() !!}
 
 @endsection

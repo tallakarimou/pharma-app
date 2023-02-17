@@ -18,7 +18,7 @@ class CreateAdminUserSeeder extends Seeder
     {
         $user = User::create([
 
-            'name' => 'Hardik Savani',
+            'name' => 'talla abdoul',
 
             'email' => 'admin@gmail.com',
 
@@ -32,7 +32,7 @@ class CreateAdminUserSeeder extends Seeder
 
 
 
-        $permissions = Permission::pluck('id','id')->all();
+        $permissions = Permission::pluck('id', 'id')->all();
 
 
 

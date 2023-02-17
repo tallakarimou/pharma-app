@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
+use App\Http\Requests\PurchaseRequest;
 
 class SupplierController extends Controller
 {
@@ -12,13 +14,13 @@ class SupplierController extends Controller
 
     {
 
-         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:supplier-list|supplier-create|supplier-edit|supplier-delete', ['only' => ['index','show']]);
 
-         $this->middleware('permission:product-create', ['only' => ['create','store']]);
+         $this->middleware('permission:supplier-create', ['only' => ['create','store']]);
 
-         $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:supplier-edit', ['only' => ['edit','update']]);
 
-         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
+         $this->middleware('permission:supplier-delete', ['only' => ['destroy']]);
 
     }
     /**
@@ -28,11 +30,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $data = Supplier::orderBy('id','DESC')->paginate(5);
-
-        return view('suppliers.index',compact('data'))
-
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $suppliers = Supplier::with('products')->get();
+        return view('suppliers.index',compact('suppliers'));
     }
 
     /**
@@ -42,7 +41,9 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('suppliers.create');
+        $products = Product::all();
+
+        return view('suppliers.create', compact('products'));
     }
 
     /**
@@ -51,27 +52,22 @@ class SupplierController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PurchaseRequest $request)
     {
-        request()->validate([
 
-            'name' => 'required',
+        $order = Supplier::create($request->all());
 
-            'email' => 'required',
-
-            'tel' => ['required','min:9','max:9'],
-
-            'adress' => ['required','min:4']
-
-        ]);
-
-
-
-        Supplier::create($request->all());
+        $products = $request->input('products', []);
+        $quantities = $request->input('quantities', []);
+        for ($product=0; $product < count($products); $product++) {
+            if ($products[$product] != '') {
+                $order->products()->attach($products[$product], ['quantity' => $quantities[$product]]);
+            }
+        }
 
         return redirect()->route('suppliers.index')
+        ->with('success','Supplier created successfully.');
 
-                        ->with('success','Supplier created successfully.');
     }
 
     /**
