@@ -36,6 +36,6 @@ class HomeController extends Controller
         $products = Product::all()->count();
         $stocks = Stock::all()->count();
         $expired = Stock::all()->where(now(), '<', 'expired_at')->count();
-        return view('example', compact('users','clients','suppliers','roles','products','stocks','expired'));
+        return view('example', compact('users', 'clients', 'suppliers', 'roles', 'products', 'stocks', 'expired'));
     }
 }

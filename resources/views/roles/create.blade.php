@@ -65,11 +65,17 @@
 
             <br/>
 
-            @foreach($permission as $value)
+            @foreach($permission->chunk(12) as $chunks)
+
+              @foreach ( $chunks as $value )
+
 
                 <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
 
                 {{ $value->name }}</label>
+
+              @endforeach
+
 
             <br/>
 
